@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Vans from "./pages/Vans"
+import VanDetail from "./pages/VanDetail"
 
 import "./server"
 
@@ -18,9 +19,10 @@ function App() {
         </nav>
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
+        <Route path="/" element={<Home />} caseSensitive/>
+        <Route path="/about" element={<About />} caseSensitive/>
+        <Route path="/vans" element={<Vans />} caseSensitive/>
+        <Route path="/vans/:id" element={<VanDetail />} caseSensitive/>
       </Routes>
     </BrowserRouter>
   )
